@@ -2,8 +2,8 @@
 /* ================== (custom font family) ============ */
 @font-face {
     font-family: 'Poppins';
-    src: url('/assets/subset-Poppins-Bold.woff') format('woff2'),
-    url('/assets/subset-Poppins-Bold.woff2') format('woff');
+    src: url('/portfoliosmu/assets/subset-Poppins-Bold.woff2') format('woff2'),
+    url('/portfoliosmu/assets/subset-Poppins-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -606,10 +606,6 @@ ul{
         max-width: 1280px;
     }
     
-    .home_container h1::before {
-        left: 20.6%;
-        top: 19%;
-    }
 }
 
 @media (max-width: 1280px){
@@ -862,8 +858,7 @@ ul{
     }
 
     .home_container h1::before {
-        left: 13.3%;
-        top: 8.9%;
+      display: none;
     }
 }
 

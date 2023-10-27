@@ -311,18 +311,33 @@ ul{
     background-color: transparent;
     position: fixed;
     z-index: 99;
-    right: 2%;
-    top: 90%;
+    right: 1.5%;
+    bottom: 6%;
     border-radius: 9px;
-    font-size: 40px;
+    font-size: 60px;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     text-align: center;
 }
 
 .number a{
     color: var(--main-heading-color);
+}
+
+.number:hover{
+    color: white;
+    background-image: url(/portfoliosmu/assets/giphy.gif);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100px;
+    height: 00pxx;
+    font-size: 70px;
+}
+
+.number i:hover{
+    color: var(--orange-color);
 }
 
 

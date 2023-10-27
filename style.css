@@ -1,0 +1,865 @@
+
+/* ================== (custom font family) ============ */
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/subset-Poppins-Bold.woff') format('woff2'),
+    url('/assets/subset-Poppins-Bold.woff2') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* =================== (base) ================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* 1rem = 16px */
+    font-size: 16px;
+    font-family: 'Poppins'; 
+    color: var(--white-color-dull);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--orange-color);
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.main{
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+
+/* ================== (boiler) ================== */
+
+:root{
+    
+    /* ---------------colors----------- */
+    --text-color-one:black;
+    --header-background-color:#050816;
+    --orange-color:rgb(255 74 63);
+    --background-color: rgb(5 8 22);
+    --main-heading-color:rgb(145 94 255);
+    --white-color:rgb(255 255 255);
+    --white-color-dull: rgb(180 181 186);
+    --paragraph-color:rgb(170 166 195);
+    --card-background-color: rgb(21 16 48);
+    --hashtag-color-one:rgb(58 150 238);
+    --hashtag-color-two:rgb(243 44 125);
+    --hashtag-color-three:rgb(31 184 135);
+    
+    
+    
+    /* ============= Fonts and Typography Size ============= */
+    /* .5rem = 8px | 1rem = 16px */
+    
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem; /* 1.5 = 24px */
+    --h2-font-size: 1.25rem; 
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --main-heading: 2.25rem;
+    
+    /* ============= Font Weight ============= */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+}
+
+/* ========== Responsive typography FOR LARGER SCREEENS ABOVE THEN 1024PX ========== */
+@media screen and (min-width: 1024px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem; /* 2.25rem = 36px  12px gap*/
+        --h2-font-size: 1.5rem; 
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;   
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+        --main-heading: 3.75rem;
+    }
+}
+
+
+/* ----------- margin/padding -------- */
+
+
+
+
+/* ========== Responsive typography FOR LARGER SCREEENS ABOVE THEN 1024PX ========== */
+@media screen and (min-width: 1024px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+
+/* ====================== (structure) ====================== */
+
+.support{
+    height: 4.5rem;
+    width: 100%;
+}
+
+.section{
+    width: 100%;
+    /* height: calc(100vh - 4.5rem);  */
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1536px;    
+}
+
+/* ---- header ---- */
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:var(--header-background-color);
+    z-index: 999;
+    overflow: hidden;
+}
+
+.nav{
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    display: flex;    
+}
+
+.nav-item{
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.nav-item a{
+    color: #a5a6c3;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.nav-item a:hover{
+    color: var(--white-color);
+    transition: .7s;
+}
+
+
+
+.logo a{
+    font-size: 18px;
+    font-family:'poppins';
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.logo a span{
+    color: var(--orange-color);
+}
+
+#firstletterhome a{
+    color:var(--white-color);
+}
+
+/* ============================ MAIN =========================== */
+
+/* ------ home ccontainer  ------*/
+.home{
+    background-image: url(/assets/homeportfolio.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.home_container{
+    text-align: center;
+    position: relative;
+    padding-bottom:2% ;
+    padding-top: 2%;
+}
+
+.home_container h1{
+    font-size:var(--main-heading);
+    color: var(--white-color);
+    font-family:'poppins';
+    font-weight: 900 !important;
+    font-size: 4rem;
+    line-height: 98px;
+    margin-top: 1rem;
+}
+
+.home_container h1 span{
+    color: var(--main-heading-color);
+}
+
+.home_container p{
+    font-size: 1.75rem;
+    line-height: 1.3;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    word-spacing: .5px;
+    margin-top: 1rem;
+}
+
+.home_container p span{
+    color: var(--orange-color);
+}
+
+
+
+.home_container h1::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: var(--orange-color);
+    border-radius: 50%;
+    position: absolute;
+    left:15.4%;
+    top: 18%;
+}
+
+/* ----- home button ------ */
+.home_container .connect{
+    border: 2px solid white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: .8rem;
+    padding-bottom:.8rem;
+    padding-left: 2rem ;
+    padding-right:2rem ;
+    margin-top: 2rem;
+    
+}
+
+.home_container .connect i{
+    color: var(--header-background-color);
+    background-color: var(--white-color);
+    border-radius: 50%;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    padding-right: .3rem;
+    padding-left: .3rem;
+}
+
+
+.home_container .connect .email, .linkdin, .connect{
+    display: inline-block;
+    margin-left: .8rem;
+    color: var(--white-color);
+}
+
+.home_container .connect .email a, .linkdin a{
+    color: var(--white-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+.home_container .connect .email span, .linkdin span{
+    margin-right: .5rem;
+}
+
+.home_container .connect:hover{
+    background-image: linear-gradient(to left, rgb(145 94 255), rgb(244, 0, 0, .8));
+    transition: 0.6s;
+}
+
+
+.number{
+    background-color: transparent;
+    position: fixed;
+    z-index: 99;
+    right: 2%;
+    top: 90%;
+    border-radius: 9px;
+    font-size: 40px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.number a{
+    color: var(--main-heading-color);
+}
+
+
+/* ----  about introduction ---- */
+.introduction, .projects, .experience, .testimoni, .contact , .footer {
+    background-color: var(--background-color);
+    padding-top: 10rem;
+}
+
+
+
+.intro-container h4, .project-container h4, .expe-container h4, .contact-container h4{
+    font-size: 18px;
+    opacity: 1;
+    letter-spacing: .2rem;
+    font-family: 'poppins'; 
+}
+
+.intro-container h2, .project-container h2, .expe-container h2, .contact-container h2{
+    font-size: 60px;
+    color: white;
+    font-family: 'poppins';
+    font-weight: bolder;
+    letter-spacing: .0rem;
+}
+
+.intro-container p, .project-container p{
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 200;
+    color: #a5a6c3;
+    line-height: 1.6rem;
+}
+
+.intro-container{
+    text-align:center;
+}
+
+.technology-icons{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.technology-icons img{
+    width: 100px;
+    height: 100px;    
+}
+
+.intro-container p{
+    margin-top: 2rem;
+}
+
+
+/* ------  project  container ------ */
+
+.cards-container{
+    margin-top: 3.5rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cards-container .card-item{
+    padding: 1rem;
+    width: 360px;
+    height: auto;
+    border: 2px solid var(--header-background-color);
+    border-radius: 20px;
+    background-color:#151030;
+    position: relative;
+}
+
+.cards-container .card-item .card-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+.cards-container .card-item .card-img img:hover{
+    transform: scale(1.5);
+    transition: .9s;
+    opacity: 1;
+}
+
+
+.cards-container .card-item .card-img{
+    height: 240px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+/* inside ccard items */
+
+.cards-container .card-item h3{
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'poppins';
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+}
+
+
+.cards-container .card-item p{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: var(--text-color-one);
+    margin-bottom: 1rem;
+    color:var(--white-color-dull);
+    text-align:left;
+}
+
+.card-item .span{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+    font-size: .9rem;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.card-item #cd1, #cd2, #cd3{
+    color:var(--orange-color);
+}
+
+
+.card-item .span span:nth-child(1){
+    color: var(--hashtag-color-one);
+}
+
+.card-item .span span:nth-child(2){
+    color: var(--hashtag-color-two);
+}
+
+.card-item .span span:nth-child(3){
+    color: var(--hashtag-color-three);
+}
+
+
+.card-item .project-tag{
+    color: black;
+    background-color: yellow;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'poppins';
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 9;
+    top: 2rem;
+    right: 2rem;
+    border: 2px solid black;
+}
+
+.card-item .project-tag a{
+    color: black;
+}
+
+
+
+/* --------- Experience section  --------- */
+
+.expe-container{
+    position: relative;
+    padding-bottom: 9rem;
+    overflow: hidden;
+}
+
+.exp-timeline{
+    /* width: 100%; */
+    height: auto;
+}
+
+.exp-timeline::before{
+    content: '';
+    width: 6px;
+    height: 75%;
+    color: white;
+    background-image: linear-gradient(to top,rgba(255,0,0,.1), rgba(145, 94, 255 , .9)  );
+    position: absolute;
+    left: 1.3rem;
+    top: 25%;
+    border-top-left-radius:5px ;
+    border-bottom-right-radius: 5px;
+}
+
+.exp-1, .exp-2 {
+    width: 400px;
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.exp-timeline .exp-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 9;
+}
+
+.exp-timeline .exp-img img{
+    border-radius: 50%;
+}
+
+
+
+.exp-timeline .exp-title h4{
+    font-size: 24px;
+    font-family: sans-serif;
+    letter-spacing: .6px;
+    font-weight: 600;
+}
+
+.exp-timeline .exp-title p{
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 300;
+    line-height: 2.5rem;
+}
+
+.exp-title p span{
+    color: var(--orange-color);
+}
+
+.exp-title small{
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+/* open to work */
+.exp-col{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.opentowork h4{
+    color: var(--hashtag-color-three);
+    font-size: 4rem;
+    font-weight: 900;
+    font-family:sans-serif;
+}
+
+.opentowork{
+    text-align:left;
+}
+
+.opentowork h4 span:nth-child(1){
+    color: var(--hashtag-color-two);
+}
+
+.opentowork h4 span:nth-child(3){
+    color: var(--hashtag-color-one);
+}
+
+.opentowork h4 span:nth-child(2){
+    color: var(--hashtag-color-three);
+}
+
+
+
+
+
+/* ====================  ( media query ) ==================== */
+
+@media (max-width:1536px){
+    .container{
+        max-width: 1280px;
+    }
+    
+}
+
+@media (max-width: 1280px){
+    .container{
+        max-width: 1024px;
+    }
+    
+    .cards-container .card-item{
+        width: 310px;
+    }
+    
+    .introduction, .projects, .experience, .testimoni, .contact, .footer {
+        padding-top: 4rem;
+    }
+    
+    .home_container h1::before {
+        left: 6.79%;
+        top: 17%;
+    }
+
+    .home_container.container {
+        padding-bottom: 5%;
+    }
+}
+
+@media (max-width:1024px ){
+    .container{
+        max-width: 768px;
+    }
+    
+    .home_container h1 {
+        font-size: 3rem;
+        line-height: 74px;
+    }
+    
+    .home_container p {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .home_container h1::before {
+        left: 6.6%;
+        top: 15.6%;
+    }
+    
+    .cards-container .card-item {
+        width: 340px;
+        margin-top: 2rem;
+    }
+    
+    .opentowork {
+        padding-left: 3rem;
+    }
+
+    .opentowork h4 {
+        color: var(--hashtag-color-three);
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        max-width: 648px;
+    }
+    
+    .home_container h1 {
+        font-size: 2.5rem;
+        line-height: 50px;
+    }
+    
+    .home_container p {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+    .home_container h1::before {
+        left: 6.9%;
+        top: 11.9%;
+    }
+    
+    .cards-container .card-item {
+        width: 309px;
+        margin-top: 2rem;
+    }
+    
+    .intro-container h4, .project-container h4, .expe-container h4, .contact-container h4 {
+        font-size: 14px;
+    }
+    
+    .intro-container h2, .project-container h2, .expe-container h2, .contact-container h2 {
+        font-size: 45px;
+    }
+    
+    .exp-timeline .exp-title h4 {
+        font-size: 18px;
+    }
+    
+    .exp-timeline .exp-title p {
+        font-size: 14px;
+    }
+    
+    .opentowork h4 {
+        font-size: 28px;
+        padding-top: 42px;
+    }
+    
+    .exp-timeline::before {
+        top: 20%;
+    }
+
+    .intro-container.container p br {
+        display: none;
+    }
+
+    .project-container.container p br {
+        display: none;
+    }
+
+    .cards-container .card-item p {
+        font-size: .9rem;
+    }
+
+    div#nav-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 648px){
+    .container{
+        max-width: 475px;
+    }
+
+    .home_container h1 {
+        font-size: 1.9rem;
+        line-height: 30px;
+    }
+    
+    .home_container p {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    .home_container .connect .email a, .linkdin a {
+        font-size: 1rem;
+    }
+
+    .intro-container h2, .project-container h2, .expe-container h2, .contact-container h2 {
+        font-size: 42px;
+    }
+
+    .cards-container .card-item {
+        width: 350px;
+    }
+
+    .exp-timeline {
+        width: 246px;
+    }
+
+    .home_container h1::before {
+        left: 5.5%;
+        top: 11.6%;
+        width: 10px;
+        height: 10px;
+    }
+
+    .intro-container.container p br {
+        display: none;
+    }
+    .project-container.container p br {
+        display: none;
+    }
+    .exp-col {
+        flex-direction: column;
+    }
+
+    .opentowork {
+        text-align: center;
+    }
+
+    .introduction, .projects, .experience, .testimoni, .contact, .footer {
+        padding-top: 4.7rem;
+    }
+
+    ul.nav-list {
+        display: none;
+    }
+}
+
+@media (max-width:500px){
+    .container{
+        max-width: 90%;
+    }
+    .home_container h1 {
+        font-size: 1.9rem;
+        line-height: 30px;
+    }
+
+    .home_container p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .home_container .connect .email a, .linkdin a {
+        font-size: .9rem;
+    }
+
+    .intro-container p, .project-container p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .home_container p br {
+        display: none;
+    }
+
+    div#nav-menu {
+        display: none;
+    }
+
+    .home_container h1::before {
+        left: 31%;
+        top: 8.6%;
+        width: 10px;
+        height: 10px;
+    }
+
+    .intro-container p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .project-container p {
+        font-size: 16px;
+        text-align: left;
+    }
+    
+    .exp-timeline::before {
+        top: 21%;
+    }
+
+    .exp-col {
+        flex-direction: column;
+    }
+    
+    .opentowork h4 {
+        text-align: center;
+    }
+    
+    .logo a {
+        font-size: 14px;
+    }
+
+    .home_container h1::before {
+        left: 13.3%;
+        top: 8.9%;
+    }
+}
+

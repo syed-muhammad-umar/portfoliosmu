@@ -606,6 +606,10 @@ ul{
         max-width: 1280px;
     }
     
+    .home_container h1::before {
+        left: 20.6%;
+        top: 19%;
+    }
 }
 
 @media (max-width: 1280px){

@@ -319,20 +319,16 @@ ul{
     width: 100px;
     height: 100px;
     text-align: center;
-}
-
-.number a{
-    color: var(--main-heading-color);
-}
-
-.number:hover{
     color: white;
     background-image: url(/portfoliosmu/assets/giphy.gif);
     background-size: 100px;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 100px;
-    height: 00pxx;
+}
+
+
+
+.number:hover{
     font-size: 70px;
 }
 
